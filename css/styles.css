@@ -1,0 +1,63 @@
+@-webkit-keyframes expand
+{
+    from {width: 0}
+    to {width: 150px}
+}
+
+@keyframes expand
+{
+    from {width: 0}
+    to {width: 150px}
+}
+
+.column, .editor
+{
+    height: 600px;
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.column
+{
+    width: 150px;
+    background-color: palevioletred;
+    text-align: center;
+}
+
+.column.new
+{
+    -webkit-animation: expand .3s ease-out;
+    animation: expand .3s ease-out;
+}
+
+.column.delete
+{
+    -webkit-animation: expand .3s ease-out reverse;
+    animation: expand .3s ease-out reverse
+}
+
+.editor
+{
+    background-color: steelblue;
+    width: 400px;
+}
+
+
+.columns, .editor
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.columns
+{
+    margin: 50px 100px;
+    direction:rtl;
+    max-width: 800px;
+    overflow: scroll;
+    white-space: nowrap;
+}
